@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>ECOVATION INTERIORS</title>
+    <style>
+      /* Base Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("images/backgroundimg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      header {
+        background-color: #0078d4;
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      section {
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        background-color: lightblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+      }
+      h1 {
+        color: #000;
+        margin-bottom: 10px;
+      }
+      /* About / Mission / Vision */
+      .about,
+      .mission,
+      .vision {
+        background-color: #eaeaea;
+        padding: 10px;
+        margin: 10px 0;
+        width: 80%;
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      /* Projects Section */
+      #pro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+      #pro img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 10px lightblue;
+      }
+      /* Logo Slider */
+      .logo-slider {
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        background: white;
+        padding: 20px;
+        border: 2px solid black;
+      }
+      .logos {
+        display: flex;
+        gap: 20px;
+        animation: scroll 30s linear infinite;
+      }
+      .logos img {
+        height: 80px;
+        max-width: 150px;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(150%);
+        }
+        to {
+          transform: translateX(-150%);
+        }
+      }
+      /* Contact Form */
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #c8c8c8;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #eaeaea;
+      }
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+      button {
+        background: #000;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #333;
+      }
+      /* Image Gallery */
+      #image-gallery {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 10px;
+      }
+      #image-gallery::-webkit-scrollbar {
+        display: none;
+      }
+      #image-gallery img {
+        width: 300px;
+        height: auto;
+        margin-right: 10px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+      #image-gallery img:hover {
+        transform: scale(1.05);
+      }
+      /* Footer */
+      footer {
+        background-color: #0078d4;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+      }
+      .footer-content {
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        font-size: 18px;
+      }
+      .footer-content a {
+        color: #ffcc00;
+        text-decoration: none;
+      }
+      .footer-content a:hover {
+        text-decoration: underline;
+      }
+      .contact-card {
+        text-align: center;
+      }
+      .contact-card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+      /* Dropdown Columns (Products Navigation) */
+      .dropdown-column {
+        margin: 0 20px;
+        min-width: 250px;
+      }
+      .dropdown-column h4 {
+        color: #00aaff;
+        margin-bottom: 10px;
+      }
+      .dropdown-column a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 5px 0;
+        font-size: 14px;
+      }
+      .dropdown-column a:hover {
+        color: #00aaff;
+      }
+      /* Responsive Adjustments */
+      @media screen and (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav ul li {
+          margin: 5px 0;
+        }
+        section,
+        .about,
+        .mission,
+        .vision {
+          width: 95%;
+        }
+        #pro {
+          flex-direction: column;
+          align-items: center;
+        }
+        .logo-slider {
+          padding: 10px;
+        }
+        .footer-content {
+          flex-direction: column;
+          align-items: center;
+        }
+        #image-gallery img {
+          width: 90%;
+          margin: 5px auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>ECOVATION INTERIORS</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <div id="home" class="container">
+      <h1>ABOUT</h1>
+      <div class="about">
+        <p>
+          We specialize in designing and constructing innovative workspace solutions that enhance productivity,
+          collaboration, and comfort. With a commitment to quality craftsmanship and modern design, we transform office
+          spaces into functional, inspiring environments tailored to your business needs. From start-ups to corporate offices,
+          we handle every aspect of workspace construction, including layout planning, interior fit-outs, and customized
+          solutions that reflect your brand identity. Our expert team ensures seamless project execution, on-time delivery,
+          and a workspace that aligns perfectly with your vision.
+          <br /><br />
+          Ecovation panels: Founded to offer a wide range of high-quality Acoustic Solutions, we specialize in acoustical
+          solutions including customized wall panels, baffle ceilings, 3D acoustical products, and printed panels.
+        </p>
+      </div>
+      <h1>MISSION</h1>
+      <div class="mission">
+        <p>
+          Our mission is to design and build innovative, functional, and inspiring workspaces that empower businesses to thrive.
+          We are committed to delivering high-quality office construction solutions that enhance productivity, collaboration, and
+          employee well-being. Through expert craftsmanship, sustainable practices, and a client-focused approach, we aim to
+          transform ordinary spaces into exceptional workplaces tailored to the unique needs of each business. Our goal is to
+          create work environments that not only reflect our clients’ brand identity but also foster success and growth.
+        </p>
+      </div>
+      <h1>VISIONS</h1>
+      <div class="vision">
+        <p>
+          To be a leading provider of sustainable and innovative building solutions, recognized for transforming spaces and
+          providing superior acoustical products and materials. We strive to inspire creativity and enhance design possibilities
+          by offering cutting-edge solutions that blend functionality, aesthetics, and environmental responsibility. Our vision is to
+          foster a world where every project, big or small, achieves its full potential through the perfect combination of design
+          excellence and high-quality, sustainable materials.
+        </p>
+      </div>
+    </div>
+
+    <!-- Clients Section -->
+    <div class="container">
+      <h1>OUR CLIENTS</h1>
+      <div class="logo-slider">
+        <div class="logos">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.WP7KdErw_cPtdfH7E-aIjwAAAA&pid=Api&P=0&h=180"
+            alt="Redbrick Offices"
+          />
+          <img
+            src="https://tse2.mm.bing.net/th?id=OIP.reZfzYzV4VKZs0E_6JY-dwHaHa&pid=Api&P=0&h=180"
+            alt="Sonyliv"
+          />
+          <img
+            src="https://www.companieshistory.com/wp-content/uploads/2013/07/TE-Connectivity.png"
+            alt="TE Connectivity"
+          />
+          <img
+            src="https://logos-world.net/wp-content/uploads/2020/11/Liebherr-Logo-Old.jpg"
+            alt="Liebherr"
+          />
+          <img
+            src="https://149448277.v2.pressablecdn.com/wp-content/uploads/2019/05/MARSH_horizontal_4c-1.jpg"
+            alt="Marsh"
+          />
+          <img
+            src="https://yt3.ggpht.com/a/AGF-l78-8XxaFSQzjduwEELVwvLzDysAwsLe1O6ciQ=s900-mo-c-c0xffffffff-rj-k-no"
+            alt="Mercer"
+          />
+          <img
+            src="https://download.logo.wine/logo/Ceva_(semiconductor_company)/Ceva_(semiconductor_company)-Logo.wine.png"
+            alt="Ceva"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="project" class="container">
+      <h1>MY PROJECTS</h1>
+      <div id="pro">
+        <img src="images/project1.jpeg" alt="Project 1" />
+        <img src="images/project2.jpeg" alt="Project 2" />
+        <img src="images/project3.jpeg" alt="Project 3" />
+        <!-- <img src="images/project4.jpg" alt="Project 4" />
+        <img src="images/project5.jpg" alt="Project 5" />
+        <img src="images/project6.jpg" alt="Project 6" />
+        <img src="images/project7.jpg" alt="Project 7" />
+        <img src="images/project8.jpg" alt="Project 8" />
+        <img src="images/project9.jpg" alt="Project 9" />
+        <img src="images/project10.jpg" alt="Project 10" /> -->
+      </div>
+    </div>
+
+    <!-- Acoustical Products Section -->
+    <div id="services" class="container">
+      <div id="Services">
+        <h1>ACOUSTICAL PRODUCTS</h1>
+      </div>
+      <section id="ser">
+        <div class="dropdown-column">
+          <h4>WALL PANELS</h4>
+          <a href="#acp">Acoustic CNS Cut</a>
+          <a href="#acsc">Acoustic Screens</a>
+          <a href="#pacp">Printed Acoustical Panels</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>CEILINGS</h4>
+          <a href="#hc">Hanging Clouds</a>
+          <a href="#accc">Acoustic Cell Ceilings</a>
+          <a href="#baf">Acoustic Baffles</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container">
+      <h1>CONTACT US</h1>
+      <section id="con">
+        <form action="#" method="POST">
+          <input type="text" name="fullname" placeholder="Full Name" required />
+          <input type="email" name="gmail" placeholder="Email Address" required />
+          <input type="tel" name="pho_no" placeholder="Mobile Number" required />
+          <input type="text" name="address" placeholder="Address" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Acoustic CNS Panels -->
+    <div id="acp" class="container">
+      <h1>WALL PANELS</h1>
+      <h1>Acoustic CNS Panels</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Acoustic CNS cut wall panels are precision-cut panels designed to improve sound absorption while adding
+            aesthetic appeal to interior spaces. Crafted from high-density materials like MDF, plywood, or fiber cement,
+            these panels use CNC cutting technology to create intricate patterns, perforations, or grooves that enhance
+            acoustic performance.
+          </p>
+        </section>
+        <div id="image-gallery">
+          <img src="images/Eimage3.jpg" alt="CNS Panel 1" />
+          <img src="images/Eimage2.jpg" alt="CNS Panel 2" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Acoustic Screens -->
+    <div id="acsc" class="container">
+      <h1>Acoustic Screens</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Acoustic Screens are soundproof barriers or panels designed to absorb, block, or redirect sound to reduce noise
+            and enhance the acoustics of a space. They are ideal for offices, studios, and public areas.
+          </p>
+        </section>
+        <div id="image-gallery">
+          <img src="images/Eimage19.jpeg" alt="Acoustic Screen" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Printed Acoustic Panels -->
+    <div id="pacp" class="container">
+      <h1>Printed Acoustic Panels</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Printed Acoustic Panels are a visually appealing solution that combine sound absorption with custom graphics,
+            making them perfect for spaces where both acoustics and aesthetics matter.
+          </p>
+        </section>
+        <div class="gallery-container">
+          <div id="image-gallery">
+            <img src="images/Eimage4.jpg" alt="Printed Panel 1" />
+            <img src="images/Eimage5.jpg" alt="Printed Panel 2" />
+            <img src="images/Eimage6.jpg" alt="Printed Panel 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hanging Clouds -->
+    <div id="hc" class="container">
+      <h1>CEILINGS</h1>
+      <h1>Hanging Clouds</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Hanging clouds, or acoustic cloud panels, provide an innovative solution for controlling sound in large spaces
+            with high ceilings. They reduce noise, control reverberation, and enhance acoustics—ideal for concert halls,
+            offices, classrooms, and theaters.
+          </p>
+        </section>
+        <div id="image-gallery">
+          <img src="images/Eimaged.jpg" alt="Hanging Cloud 1" />
+          <img src="images/Eimagedd.jpg" alt="Hanging Cloud 2" />
+          <img src="images/Eimageddd.jpg" alt="Hanging Cloud 3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Acoustic Cell Ceilings -->
+    <div id="accc" class="container">
+      <h1>Acoustic Cell Ceilings</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Acoustic cell ceilings consist of individual panels arranged in a grid system engineered to absorb sound and reduce
+            reverberation. They are ideal for spaces where sound control is critical.
+          </p>
+        </section>
+        <div id="image-gallery">
+          <img src="images/Eimage10.jpeg" alt="Acoustic Cell Ceiling 1" />
+          <img src="images/Eimage11.jpeg" alt="Acoustic Cell Ceiling 2" />
+          <img src="images/Eimage12.jpeg" alt="Acoustic Cell Ceiling 3" />
+          <img src="images/Eimage13.jpeg" alt="Acoustic Cell Ceiling 4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Acoustic Baffles -->
+    <div id="baf" class="container">
+      <h1>Acoustic Baffles</h1>
+      <div id="cont">
+        <section id="products">
+          <p>
+            Acoustic baffles are sound-absorbing or diffusing structures used to control sound in spaces like concert halls,
+            studios, and industrial areas. They reduce noise levels and control reverberation, creating a more controlled sound environment.
+          </p>
+        </section>
+        <div id="image-gallery">
+          <img src="images/Eimage8.jpeg" alt="Acoustic Baffle 1" />
+          <img src="images/Eimage88.jpeg" alt="Acoustic Baffle 2" />
+          <img src="images/Eimage888.jpeg" alt="Acoustic Baffle 3" />
+          <img src="images/Eimage8888.jpeg" alt="Acoustic Baffle 4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <h2>Contact Information</h2>
+        <div class="footer-content">
+          <div class="contact-card">
+            <img src="images/call_icon.jpg" alt="Call Icon" />
+            <h3>CALL US</h3>
+            <p>+91 9513877866</p>
+          </div>
+          <div class="contact-card">
+            <img src="images/email_icon.png" alt="Email Icon" />
+            <h3>EMAIL US</h3>
+            <p><a href="mailto:info@ecovation.co.in">info@ecovation.co.in</a></p>
+          </div>
+          <div class="contact-card">
+            <img src="images/www.jpg" alt="Website Icon" />
+            <h3>Our Website</h3>
+            <p><a href="https://www.ecovation.co.in">www.ecovation.co.in</a></p>
+          </div>
+          <div class="contact-card">
+            <img src="images/address-logo.png" alt="Address Icon" />
+            <h3>ADDRESS</h3>
+            <p>Unit No, B/19/01 - Nagasandra Tumkur Road,</p>
+            <p>Bangalore, Karnataka - 560073</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
