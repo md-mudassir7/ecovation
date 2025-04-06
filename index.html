@@ -9,249 +9,6 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <title>Ecovation</title>
-    <style>
-      /* Base Styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url("images/backgroundimg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-      }
-      header {
-        background-color: #0078d4;
-        padding: 10px 0;
-        text-align: center;
-      }
-      nav ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 0 10px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-      }
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      section {
-        padding: 20px;
-        margin: 20px auto;
-        width: 90%;
-        background-color: lightblue;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-size: 20px;
-      }
-      h1 {
-        color: #000;
-        margin-bottom: 10px;
-      }
-      /* About / Mission / Vision */
-      .about,
-      .mission,
-      .vision {
-        background-color: #eaeaea;
-        padding: 10px;
-        margin: 10px 0;
-        width: 80%;
-        font-size: 20px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
-      /* Projects Section */
-      #pro {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-      }
-      #pro img {
-        width: 300px;
-        max-width: 100%;
-        height: auto;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 2px 4px 10px lightblue;
-      }
-      /* Logo Slider */
-      .logo-slider {
-        width: 100%;
-        height: 100px;
-        overflow: hidden;
-        background: white;
-        padding: 20px;
-        border: 2px solid black;
-      }
-      .logos {
-        display: flex;
-        gap: 20px;
-        animation: scroll 30s linear infinite;
-      }
-      .logos img {
-        height: 80px;
-        max-width: 150px;
-      }
-      @keyframes scroll {
-        from {
-          transform: translateX(150%);
-        }
-        to {
-          transform: translateX(-150%);
-        }
-      }
-      /* Contact Form */
-      form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 600px;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #c8c8c8;
-        border-radius: 5px;
-        font-size: 16px;
-        background-color: #eaeaea;
-      }
-      textarea {
-        resize: none;
-        height: 100px;
-      }
-      button {
-        background: #000;
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      button:hover {
-        background: #333;
-      }
-      /* Image Gallery */
-      #image-gallery {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 10px;
-      }
-      #image-gallery::-webkit-scrollbar {
-        display: none;
-      }
-      #image-gallery img {
-        width: 300px;
-        height: auto;
-        margin-right: 10px;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-      }
-      #image-gallery img:hover {
-        transform: scale(1.05);
-      }
-      /* Footer */
-      footer {
-        background-color: #0078d4;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        width: 100%;
-      }
-      .footer-content {
-        max-width: 800px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 20px;
-        font-size: 18px;
-      }
-      .footer-content a {
-        color: #ffcc00;
-        text-decoration: none;
-      }
-      .footer-content a:hover {
-        text-decoration: underline;
-      }
-      .contact-card {
-        text-align: center;
-      }
-      .contact-card img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
-      }
-      /* Dropdown Columns (Products Navigation) */
-      .dropdown-column {
-        margin: 0 20px;
-        min-width: 250px;
-      }
-      .dropdown-column h4 {
-        color: #00aaff;
-        margin-bottom: 10px;
-      }
-      .dropdown-column a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        padding: 5px 0;
-        font-size: 14px;
-      }
-      .dropdown-column a:hover {
-        color: #00aaff;
-      }
-      /* Responsive Adjustments */
-      @media screen and (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-          align-items: center;
-        }
-        nav ul li {
-          margin: 5px 0;
-        }
-        section,
-        .about,
-        .mission,
-        .vision {
-          width: 95%;
-        }
-        #pro {
-          flex-direction: column;
-          align-items: center;
-        }
-        .logo-slider {
-          padding: 10px;
-        }
-        .footer-content {
-          flex-direction: column;
-          align-items: center;
-        }
-        #image-gallery img {
-          width: 90%;
-          margin: 5px auto;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -262,12 +19,12 @@
           <li class="dropdown">
             <a href="#services" class="dropbtn">Services ▾</a>
             <ul class="dropdown-content">
-              <li><a href="#residential">Residential</a></li>
               <li><a href="#workplaces">Workplaces</a></li>
+              <li><a href="#residential">Residential</a></li>
               <li><a href="#acoustic">Acoustic Panels</a></li>
             </ul>
           </li>          
-          <li><a href="#project">Projects</a></li>
+          <!-- <li><a href="#project">Projects</a></li> -->
           <li><a href="#careers">Carrers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -339,9 +96,9 @@
       </div>
     </div>
 
-    <!-- Projects Section -->
-    <div id="project" class="container">
-        <h1>Projects</h1>
+    <!-- Workplaces Section -->
+    <div id="workplaces" class="container">
+        <h1>Workplaces</h1>
       
         <!-- Main Preview Image -->
         <div class="main-image-container">
@@ -367,40 +124,40 @@
           <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
           <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
         </div>
-      </div>
+    </div>
       
       
       
 
-    <!-- Projects Section -->
+    <!-- Residential Section -->
     <div id="residential" class="container">
         <h1>Residential</h1>
-      
+
         <!-- Main Preview Image -->
         <div class="main-image-container">
-          <img id="mainPreview2" src="images/Projects/project1.jpeg" alt="Main Project Image" />
+            <img id="mainPreview2" src="images/Projects/project1.jpeg" alt="Main Project Image" />
         </div>
-      
+
         <!-- Thumbnails -->
         <div class="thumbnail-gallery">
-          <img src="images/Projects/project1.jpeg" alt="Project 1" onclick="showImage(this)" />
-          <img src="images/Projects/project2.jpeg" alt="Project 2" onclick="showImage(this)" />
-          <img src="images/Projects/project3.jpeg" alt="Project 3" onclick="showImage(this)" />
-          <img src="images/Projects/project4.jpeg" alt="Project 4" onclick="showImage(this)" />
-          <img src="images/Projects/project5.jpeg" alt="Project 5" onclick="showImage(this)" />
-          <img src="images/Projects/project6.jpeg" alt="Project 6" onclick="showImage(this)" />
-          <img src="images/Projects/project7.jpeg" alt="Project 7" onclick="showImage(this)" />
-          <img src="images/Projects/project8.jpeg" alt="Project 8" onclick="showImage(this)" />
-          <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" />
-          <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" />
-          <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
-          <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
-          <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
-          <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
-          <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
-          <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
+            <img src="images/Projects/project1.jpeg" alt="Project 1" onclick="showImage(this)" />
+            <img src="images/Projects/project2.jpeg" alt="Project 2" onclick="showImage(this)" />
+            <img src="images/Projects/project3.jpeg" alt="Project 3" onclick="showImage(this)" />
+            <img src="images/Projects/project4.jpeg" alt="Project 4" onclick="showImage(this)" />
+            <img src="images/Projects/project5.jpeg" alt="Project 5" onclick="showImage(this)" />
+            <img src="images/Projects/project6.jpeg" alt="Project 6" onclick="showImage(this)" />
+            <img src="images/Projects/project7.jpeg" alt="Project 7" onclick="showImage(this)" />
+            <img src="images/Projects/project8.jpeg" alt="Project 8" onclick="showImage(this)" />
+            <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" />
+            <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" />
+            <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
+            <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
+            <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
+            <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
+            <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
+            <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
         </div>
-      </div>
+    </div>
 
     <!-- Acoustical Products Section -->
     <!-- <div id="acoustic" class="container">
@@ -437,8 +194,8 @@
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimage3.jpg" alt="CNC Panel 1" />
-          <img src="images/Eimage2.jpg" alt="CNC Panel 2" />
+          <img src="images/Projects/project1.jpeg" alt="CNC Panel 1" />
+          <img src="images/Projects/project1.jpeg" alt="CNC Panel 2" />
         </div>
       </div>
     </div>
@@ -454,7 +211,7 @@
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimage19.jpeg" alt="Acoustic Screen" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Screen" />
         </div>
       </div>
     </div>
@@ -471,9 +228,9 @@
         </section>
         <div class="gallery-container">
           <div id="image-gallery">
-            <img src="images/Eimage4.jpg" alt="Printed Panel 1" />
-            <img src="images/Eimage5.jpg" alt="Printed Panel 2" />
-            <img src="images/Eimage6.jpg" alt="Printed Panel 3" />
+            <img src="images/Projects/project1.jpeg" alt="Printed Panel 1" />
+            <img src="images/Projects/project1.jpeg" alt="Printed Panel 2" />
+            <img src="images/Projects/project1.jpeg" alt="Printed Panel 3" />
           </div>
         </div>
       </div>
@@ -481,7 +238,7 @@
 
     <!-- Hanging Clouds -->
     <div id="hc" class="container">
-      <h1>Ceilings</h1>
+      <!-- <h1>Ceilings</h1> -->
       <h1>Hanging Clouds</h1>
       <div id="cont">
         <section id="products">
@@ -492,9 +249,9 @@
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimaged.jpg" alt="Hanging Cloud 1" />
-          <img src="images/Eimagedd.jpg" alt="Hanging Cloud 2" />
-          <img src="images/Eimageddd.jpg" alt="Hanging Cloud 3" />
+          <img src="images/Projects/project1.jpeg" alt="Hanging Cloud 1" />
+          <img src="images/Projects/project1.jpeg" alt="Hanging Cloud 2" />
+          <img src="images/Projects/project1.jpeg" alt="Hanging Cloud 3" />
         </div>
       </div>
     </div>
@@ -510,10 +267,10 @@
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimage10.jpeg" alt="Acoustic Cell Ceiling 1" />
-          <img src="images/Eimage11.jpeg" alt="Acoustic Cell Ceiling 2" />
-          <img src="images/Eimage12.jpeg" alt="Acoustic Cell Ceiling 3" />
-          <img src="images/Eimage13.jpeg" alt="Acoustic Cell Ceiling 4" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Cell Ceiling 1" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Cell Ceiling 2" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Cell Ceiling 3" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Cell Ceiling 4" />
         </div>
       </div>
     </div>
@@ -529,10 +286,10 @@
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimage8.jpeg" alt="Acoustic Baffle 1" />
-          <img src="images/Eimage88.jpeg" alt="Acoustic Baffle 2" />
-          <img src="images/Eimage888.jpeg" alt="Acoustic Baffle 3" />
-          <img src="images/Eimage8888.jpeg" alt="Acoustic Baffle 4" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Baffle 1" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Baffle 2" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Baffle 3" />
+          <img src="images/Projects/project1.jpeg" alt="Acoustic Baffle 4" />
         </div>
       </div>
     </div>
@@ -540,7 +297,7 @@
     <!-- Footer -->
 
     <!-- Careers Section -->
-    <div id="careers" class="container">
+    <!-- <div id="careers" class="container">
         <h1>Careers</h1>
         <section id="con">
           <form action="#" method="POST">
@@ -552,16 +309,25 @@
             <button type="submit">Submit</button>
           </form>
         </section>
-      </div>
+      </div> -->
 
     <footer>
       <div class="footer-container">
         <h2>Contact Us</h2>
         <div class="footer-content">
+            <div class="contact-card">
+                <img src="images/logos/whatsapp.png" alt="WhatsApp Icon" />
+                <h3>WhatsApp</h3>
+                <p>
+                    <a href="https://wa.me/919513877866?text=Hi%20Ecovation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank">
+                    +91 9513877866
+                    </a>
+                </p>
+            </div>
           <div class="contact-card">
             <img src="images/logos/call.png" alt="Call Icon" />
             <h3>Call</h3>
-            <p>+91 9513877866</p>
+            <p><a href="tel:+919513877866">+91 9513877866</a></p>
           </div>
           <div class="contact-card">
             <img src="images/logos/email.png" alt="Email Icon" />
