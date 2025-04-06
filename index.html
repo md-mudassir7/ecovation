@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
-    <title>ECOVATION INTERIORS</title>
+    <title>Ecovation</title>
     <style>
       /* Base Styles */
       body {
@@ -254,11 +256,19 @@
   <body>
     <header>
       <nav>
-        <h1>ECOVATION INTERIORS</h1>
+        <h1>Ecovation Interiors</h1>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
+          <li class="dropdown">
+            <a href="#services" class="dropbtn">Services ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="#residential">Residential</a></li>
+              <li><a href="#workplaces">Workplaces</a></li>
+              <li><a href="#acoustic">Acoustic Panels</a></li>
+            </ul>
+          </li>          
           <li><a href="#project">Projects</a></li>
+          <li><a href="#careers">Carrers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -266,45 +276,35 @@
 
     <!-- About Section -->
     <div id="home" class="container">
-      <h1>ABOUT</h1>
+      <h1>About</h1>
       <div class="about">
         <p>
-          We specialize in designing and constructing innovative workspace solutions that enhance productivity,
-          collaboration, and comfort. With a commitment to quality craftsmanship and modern design, we transform office
-          spaces into functional, inspiring environments tailored to your business needs. From start-ups to corporate offices,
-          we handle every aspect of workspace construction, including layout planning, interior fit-outs, and customized
-          solutions that reflect your brand identity. Our expert team ensures seamless project execution, on-time delivery,
-          and a workspace that aligns perfectly with your vision.
-          <br /><br />
-          Ecovation panels: Founded to offer a wide range of high-quality Acoustic Solutions, we specialize in acoustical
-          solutions including customized wall panels, baffle ceilings, 3D acoustical products, and printed panels.
+            We specialize in designing and constructing innovative spaces. With a commitment to quality craftsmanship and modern design, we transform office spaces into functional, inspiring environments.
+            <br><br>
+            We handle every aspect of your space construction, including layout planning, interior fit-outs, and customized solutions that reflect your brand identity. Our expert team ensures seamless project execution, on-time delivery, and a space that aligns perfectly with your vision
         </p>
       </div>
-      <h1>MISSION</h1>
+      <h1>Mission</h1>
       <div class="mission">
         <p>
-          Our mission is to design and build innovative, functional, and inspiring workspaces that empower businesses to thrive.
-          We are committed to delivering high-quality office construction solutions that enhance productivity, collaboration, and
-          employee well-being. Through expert craftsmanship, sustainable practices, and a client-focused approach, we aim to
-          transform ordinary spaces into exceptional workplaces tailored to the unique needs of each business. Our goal is to
-          create work environments that not only reflect our clients’ brand identity but also foster success and growth.
+            Our mission is to design and build innovative, functional, and inspiring spaces. We are committed to delivering high-quality construction solutions that enhance productivity, collaboration, and employee well-being.
+            <br><br>
+            Through expert craftsmanship, sustainable practices, and a client-focused approach, we aim to transform ordinary spaces into exceptional places tailored to the unique needs
         </p>
       </div>
-      <h1>VISIONS</h1>
+      <h1>Vision</h1>
       <div class="vision">
         <p>
-          To be a leading provider of sustainable and innovative building solutions, recognized for transforming spaces and
-          providing superior acoustical products and materials. We strive to inspire creativity and enhance design possibilities
-          by offering cutting-edge solutions that blend functionality, aesthetics, and environmental responsibility. Our vision is to
-          foster a world where every project, big or small, achieves its full potential through the perfect combination of design
-          excellence and high-quality, sustainable materials.
+            To be a leading provider of sustainable and innovative building solutions, recognized for transforming spaces. We strive to inspire creativity and enhance design possibilities by offering cutting-edge solutions that blend functionality, aesthetics, and environmental responsibility. 
+            <br><br>
+            Our vision is to foster a world where every project, big or small, achieves its full potential through the perfect combination of design excellence and high-quality, sustainable materials.
         </p>
       </div>
     </div>
 
     <!-- Clients Section -->
     <div class="container">
-      <h1>OUR CLIENTS</h1>
+      <h1>Our Clients</h1>
       <div class="logo-slider">
         <div class="logos">
           <img
@@ -341,73 +341,104 @@
 
     <!-- Projects Section -->
     <div id="project" class="container">
-      <h1>MY PROJECTS</h1>
-      <div id="pro">
-        <img src="images/project1.jpeg" alt="Project 1" />
-        <img src="images/project2.jpeg" alt="Project 2" />
-        <img src="images/project3.jpeg" alt="Project 3" />
-        <img src="images/project4.jpeg" alt="Project 4" />
-        <img src="images/project5.jpeg" alt="Project 5" />
-        <img src="images/project6.jpeg" alt="Project 6" />
-        <img src="images/project7.jpeg" alt="Project 7" />
-        <img src="images/project8.jpeg" alt="Project 8" />
-        <!-- <img src="images/project9.jpg" alt="Project 9" />
-        <img src="images/project10.jpg" alt="Project 10" /> -->
+        <h1>Projects</h1>
+      
+        <!-- Main Preview Image -->
+        <div class="main-image-container">
+          <img id="mainPreview" src="images/Projects/project1.jpeg" alt="Main Project Image" />
+        </div>
+      
+        <!-- Thumbnails -->
+        <div class="thumbnail-gallery">
+          <img src="images/Projects/project1.jpeg" alt="Project 1" onclick="showImage(this)" />
+          <img src="images/Projects/project2.jpeg" alt="Project 2" onclick="showImage(this)" />
+          <img src="images/Projects/project3.jpeg" alt="Project 3" onclick="showImage(this)" />
+          <img src="images/Projects/project4.jpeg" alt="Project 4" onclick="showImage(this)" />
+          <img src="images/Projects/project5.jpeg" alt="Project 5" onclick="showImage(this)" />
+          <img src="images/Projects/project6.jpeg" alt="Project 6" onclick="showImage(this)" />
+          <img src="images/Projects/project7.jpeg" alt="Project 7" onclick="showImage(this)" />
+          <img src="images/Projects/project8.jpeg" alt="Project 8" onclick="showImage(this)" />
+          <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" />
+          <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" />
+          <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
+          <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
+          <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
+          <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
+          <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
+          <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
+        </div>
       </div>
-    </div>
+      
+      
+      
+
+    <!-- Projects Section -->
+    <div id="residential" class="container">
+        <h1>Residential</h1>
+      
+        <!-- Main Preview Image -->
+        <div class="main-image-container">
+          <img id="mainPreview2" src="images/Projects/project1.jpeg" alt="Main Project Image" />
+        </div>
+      
+        <!-- Thumbnails -->
+        <div class="thumbnail-gallery">
+          <img src="images/Projects/project1.jpeg" alt="Project 1" onclick="showImage(this)" />
+          <img src="images/Projects/project2.jpeg" alt="Project 2" onclick="showImage(this)" />
+          <img src="images/Projects/project3.jpeg" alt="Project 3" onclick="showImage(this)" />
+          <img src="images/Projects/project4.jpeg" alt="Project 4" onclick="showImage(this)" />
+          <img src="images/Projects/project5.jpeg" alt="Project 5" onclick="showImage(this)" />
+          <img src="images/Projects/project6.jpeg" alt="Project 6" onclick="showImage(this)" />
+          <img src="images/Projects/project7.jpeg" alt="Project 7" onclick="showImage(this)" />
+          <img src="images/Projects/project8.jpeg" alt="Project 8" onclick="showImage(this)" />
+          <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" />
+          <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" />
+          <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
+          <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
+          <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
+          <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
+          <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
+          <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
+        </div>
+      </div>
 
     <!-- Acoustical Products Section -->
-    <div id="services" class="container">
-      <div id="Services">
-        <h1>ACOUSTICAL PRODUCTS</h1>
-      </div>
-      <section id="ser">
+    <!-- <div id="acoustic" class="container">
+      <div id="acoustic">
+        <h1>Acoustical Products</h1>
+      </div> -->
+      <!-- <section id="ser">
         <div class="dropdown-column">
-          <h4>WALL PANELS</h4>
-          <a href="#acp">Acoustic CNS Cut</a>
+          <h4>Wall Panels</h4>
+          <a href="#acp">Acoustic CNC Cut</a>
           <a href="#acsc">Acoustic Screens</a>
           <a href="#pacp">Printed Acoustical Panels</a>
         </div>
         <div class="dropdown-column">
-          <h4>CEILINGS</h4>
+          <h4>Ceilings</h4>
           <a href="#hc">Hanging Clouds</a>
           <a href="#accc">Acoustic Cell Ceilings</a>
           <a href="#baf">Acoustic Baffles</a>
         </div>
-      </section>
-    </div>
+      </section> -->
+    <!-- </div> -->
 
-    <!-- Contact Section -->
-    <div id="contact" class="container">
-      <h1>CONTACT US</h1>
-      <section id="con">
-        <form action="#" method="POST">
-          <input type="text" name="fullname" placeholder="Full Name" required />
-          <input type="email" name="gmail" placeholder="Email Address" required />
-          <input type="tel" name="pho_no" placeholder="Mobile Number" required />
-          <input type="text" name="address" placeholder="Address" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </div>
-
-    <!-- Acoustic CNS Panels -->
-    <div id="acp" class="container">
-      <h1>WALL PANELS</h1>
-      <h1>Acoustic CNS Panels</h1>
+    <!-- Acoustic CNC Panels -->
+    <div id="acoustic" class="container">
+      <!-- <h1>Wall Panels</h1> -->
+      <h1>Acoustic CNC Panels</h1>
       <div id="cont">
         <section id="products">
           <p>
-            Acoustic CNS cut wall panels are precision-cut panels designed to improve sound absorption while adding
+            Acoustic CNC cut wall panels are precision-cut panels designed to improve sound absorption while adding
             aesthetic appeal to interior spaces. Crafted from high-density materials like MDF, plywood, or fiber cement,
             these panels use CNC cutting technology to create intricate patterns, perforations, or grooves that enhance
             acoustic performance.
           </p>
         </section>
         <div id="image-gallery">
-          <img src="images/Eimage3.jpg" alt="CNS Panel 1" />
-          <img src="images/Eimage2.jpg" alt="CNS Panel 2" />
+          <img src="images/Eimage3.jpg" alt="CNC Panel 1" />
+          <img src="images/Eimage2.jpg" alt="CNC Panel 2" />
         </div>
       </div>
     </div>
@@ -450,7 +481,7 @@
 
     <!-- Hanging Clouds -->
     <div id="hc" class="container">
-      <h1>CEILINGS</h1>
+      <h1>Ceilings</h1>
       <h1>Hanging Clouds</h1>
       <div id="cont">
         <section id="products">
@@ -507,29 +538,45 @@
     </div>
 
     <!-- Footer -->
+
+    <!-- Careers Section -->
+    <div id="careers" class="container">
+        <h1>Careers</h1>
+        <section id="con">
+          <form action="#" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name" required />
+            <input type="email" name="gmail" placeholder="Email Address" required />
+            <input type="tel" name="pho_no" placeholder="Mobile Number" required />
+            <input type="text" name="address" placeholder="Address" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+
     <footer>
       <div class="footer-container">
-        <h2>Contact Information</h2>
+        <h2>Contact Us</h2>
         <div class="footer-content">
           <div class="contact-card">
-            <img src="images/call_icon.jpg" alt="Call Icon" />
-            <h3>CALL US</h3>
+            <img src="images/logos/call.png" alt="Call Icon" />
+            <h3>Call</h3>
             <p>+91 9513877866</p>
           </div>
           <div class="contact-card">
-            <img src="images/email_icon.png" alt="Email Icon" />
-            <h3>EMAIL US</h3>
+            <img src="images/logos/email.png" alt="Email Icon" />
+            <h3>Email</h3>
             <p><a href="mailto:info@ecovation.co.in">info@ecovation.co.in</a></p>
           </div>
           <div class="contact-card">
-            <img src="images/www.jpg" alt="Website Icon" />
-            <h3>Our Website</h3>
+            <img src="images/logos/website.png" alt="Website Icon" />
+            <h3>Website</h3>
             <p><a href="https://www.ecovation.co.in">www.ecovation.co.in</a></p>
           </div>
           <div class="contact-card">
-            <img src="images/address-logo.png" alt="Address Icon" />
-            <h3>ADDRESS</h3>
-            <p>Unit No, B/19/01 - Nagasandra Tumkur Road,</p>
+            <img src="images/logos/location.png" alt="Address Icon" />
+            <h3>Address</h3>
+            <p>Arvind Oasis, Unit No, B/19/01 - Nagasandra Tumkur Road,</p>
             <p>Bangalore, Karnataka - 560073</p>
           </div>
         </div>
