@@ -1,389 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <title>Ecovation</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>Ecovation Interiors</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li class="dropdown">
-            <a href="#services" class="dropbtn">Services ▾</a>
-            <ul class="dropdown-content">
-              <li><a href="#workplaces">Workplaces</a></li>
-              <li><a href="#residential">Residential</a></li>
-              <li><a href="#acoustic">Acoustic Panels</a></li>
-            </ul>
-          </li>          
-          <!-- <li><a href="#project">Projects</a></li> -->
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecovation Interiors</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="#hero" class="logo">Eco<span>vation</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <!-- About Section -->
-    <div id="home" class="container">
-      <h1>About</h1>
-      <div class="about">
-        <p>
-            We specialize in designing and constructing innovative spaces. With a commitment to quality craftsmanship and modern design, we transform office spaces into functional, inspiring environments.
-            <br><br>
-            We handle every aspect of your space construction, including layout planning, interior fit-outs, and customized solutions that reflect your brand identity. Our expert team ensures seamless project execution, on-time delivery, and a space that aligns perfectly with your vision
-        </p>
-      </div>
-      <h1>Mission</h1>
-      <div class="mission">
-        <p>
-            Our mission is to design and build innovative, functional, and inspiring spaces. We are committed to delivering high-quality construction solutions that enhance productivity, collaboration, and employee well-being.
-            <br><br>
-            Through expert craftsmanship, sustainable practices, and a client-focused approach, we aim to transform ordinary spaces into exceptional places tailored to the unique needs
-        </p>
-      </div>
-      <h1>Vision</h1>
-      <div class="vision">
-        <p>
-            To be a leading provider of sustainable and innovative building solutions, recognized for transforming spaces. We strive to inspire creativity and enhance design possibilities by offering cutting-edge solutions that blend functionality, aesthetics, and environmental responsibility. 
-            <br><br>
-            Our vision is to foster a world where every project, big or small, achieves its full potential through the perfect combination of design excellence and high-quality, sustainable materials.
-        </p>
-      </div>
-    </div>
-
-    <!-- Clients Section -->
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <h1>Our Clients</h1>
-      <div class="logo-slider">
-        <div class="logos">
-          <img
-            src="https://tse4.mm.bing.net/th?id=OIP.WP7KdErw_cPtdfH7E-aIjwAAAA&pid=Api&P=0&h=180"
-            alt="Redbrick Offices"
-          />
-          <img
-            src="https://tse2.mm.bing.net/th?id=OIP.reZfzYzV4VKZs0E_6JY-dwHaHa&pid=Api&P=0&h=180"
-            alt="Sonyliv"
-          />
-          <img
-            src="https://www.companieshistory.com/wp-content/uploads/2013/07/TE-Connectivity.png"
-            alt="TE Connectivity"
-          />
-          <img
-            src="https://logos-world.net/wp-content/uploads/2020/11/Liebherr-Logo-Old.jpg"
-            alt="Liebherr"
-          />
-          <img
-            src="https://149448277.v2.pressablecdn.com/wp-content/uploads/2019/05/MARSH_horizontal_4c-1.jpg"
-            alt="Marsh"
-          />
-          <img
-            src="https://yt3.ggpht.com/a/AGF-l78-8XxaFSQzjduwEELVwvLzDysAwsLe1O6ciQ=s900-mo-c-c0xffffffff-rj-k-no"
-            alt="Mercer"
-          />
-          <img
-            src="https://download.logo.wine/logo/Ceva_(semiconductor_company)/Ceva_(semiconductor_company)-Logo.wine.png"
-            alt="Ceva"
-          />
-          <img
-            src="images/logos/adt.png"
-            alt="ADT"
-          />
-          <img
-            src="images/logos/alphadyne.jpeg"
-            alt="Alphadyne"
-          />
-          <img
-            src="images/logos/enfinity.jpg"
-            alt="Enfinity"
-          />
-          <img
-            src="images/logos/gen.jpeg"
-            alt="Gen Digital"
-          />
-          <img
-            src="images/logos/sears.jpeg"
-            alt="Sears"
-          />
-          <img
-            src="images/logos/ukg.jpeg"
-            alt="UKG"
-          />
+      <div class="hero-content">
+        <h1 class="fade-in">Transform Your Space with <span>Innovative</span> Design</h1>
+        <p class="fade-in">Creating beautiful, functional, and sustainable interior spaces that reflect your unique style and vision</p>
+        <div class="hero-buttons fade-in">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#portfolio" class="btn btn-outline">View Our Work</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Workplaces Section -->
-    <div id="workplaces" class="container">
-        <h1>Workplaces</h1>
-        <section id="products">
-          <p>
-            We specialize in constructing innovative workspace solutions that enhance productivity, collaboration, and comfort. With a commitment to quality craftsmanship, we transform office spaces into functional, inspiring environments tailored to your business needs.
-            <br><br>
-            We specializes in the build of office spaces, offering end-to-end solutions that combine innovative design with efficient construction. Our team work closely with clients to understand their specific needs, creating customized office environments that enhance productivity and reflect the company's brand. 
-            <br><br>
-            From conceptual design to project completion, the firm manages every aspect of the process, ensuring high-quality, functional, and aesthetically pleasing workspaces tailored to modern business requirements. Our expertise includes space planning, interior design, construction, and project management.        
-          </p>
-        </section>
-      
-        <!-- Main Preview Image -->
-        <div class="main-image-container">
-          <img id="mainPreview" src="images/Projects/project1.jpeg" alt="Main Project Image" />
-        </div>
-      
-        <!-- Thumbnails -->
-        <div class="thumbnail-gallery">
-          <img src="images/Projects/project1.jpeg" alt="Project 1" onclick="showImage(this)" />
-          <img src="images/Projects/project2.jpeg" alt="Project 2" onclick="showImage(this)" />
-          <img src="images/Projects/project3.jpeg" alt="Project 3" onclick="showImage(this)" />
-          <img src="images/Projects/project4.jpeg" alt="Project 4" onclick="showImage(this)" />
-          <img src="images/Projects/project5.jpeg" alt="Project 5" onclick="showImage(this)" />
-          <img src="images/Projects/project6.jpeg" alt="Project 6" onclick="showImage(this)" />
-          <img src="images/Projects/project7.jpeg" alt="Project 7" onclick="showImage(this)" />
-          <img src="images/Projects/project8.jpeg" alt="Project 8" onclick="showImage(this)" />
-          <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" />
-          <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" />
-          <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
-          <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
-          <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
-          <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
-          <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
-          <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
-        </div>
-    </div>
-      
-      
-      
-
-    <!-- Residential Section -->
-    <div id="residential" class="container">
-        <h1>Residential</h1>
-        <section id="products">
-            <p>
-                Crafting luxurious residential interiors, delivering bespoke designs that blend elegance, sophistication, and functionality. With a keen eye for detail and a commitment to excellence, We transform living spaces into personalized masterpieces, using premium materials, innovative design concepts, and the latest trends in interior aesthetics. Whether it's a lavish penthouse, a grand villa, or an apartment, your expertise ensures a seamless fusion of comfort and opulence.
-            </p>
-          </section>
-        <!-- Main Preview Image -->
-        <div class="main-image-container">
-            <img id="mainPreview2" src="images/Residential/1.jpg" alt="Main Project Image" />
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="thumbnail-gallery">
-            <img src="images/Residential/1.jpg" alt="Project 1" onclick="showImage(this)" />
-            <img src="images/Residential/2.jpg" alt="Project 2" onclick="showImage(this)" />
-            <img src="images/Residential/3.png" alt="Project 3" onclick="showImage(this)" />
-            <img src="images/Residential/4.png" alt="Project 4" onclick="showImage(this)" />
-            <img src="images/Residential/5.png" alt="Project 5" onclick="showImage(this)" />
-            <img src="images/Residential/6.png" alt="Project 6" onclick="showImage(this)" />
-            <img src="images/Residential/7.png" alt="Project 7" onclick="showImage(this)" />
-            <!-- <img src="images/Projects/project9.jpeg" alt="Project 9" onclick="showImage(this)" /> -->
-            <!-- <img src="images/Projects/project10.jpeg" alt="Project 10" onclick="showImage(this)" /> -->
-            <!-- <img src="images/Projects/project11.jpeg" alt="Project 11" onclick="showImage(this)" />
-            <img src="images/Projects/project12.jpeg" alt="Project 12" onclick="showImage(this)" />
-            <img src="images/Projects/project13.jpeg" alt="Project 13" onclick="showImage(this)" />
-            <img src="images/Projects/project14.jpeg" alt="Project 14" onclick="showImage(this)" />
-            <img src="images/Projects/project15.jpeg" alt="Project 15" onclick="showImage(this)" />
-            <img src="images/Projects/project16.jpeg" alt="Project 16" onclick="showImage(this)" /> -->
-        </div>
-    </div>
-
-    <!-- Acoustical Products Section -->
-    <!-- <div id="acoustic" class="container">
-      <div id="acoustic">
-        <h1>Acoustical Products</h1>
-      </div> -->
-      <!-- <section id="ser">
-        <div class="dropdown-column">
-          <h4>Wall Panels</h4>
-          <a href="#acp">Acoustic CNC Cut</a>
-          <a href="#acsc">Acoustic Screens</a>
-          <a href="#pacp">Printed Acoustical Panels</a>
-        </div>
-        <div class="dropdown-column">
-          <h4>Ceilings</h4>
-          <a href="#hc">Hanging Clouds</a>
-          <a href="#accc">Acoustic Cell Ceilings</a>
-          <a href="#baf">Acoustic Baffles</a>
-        </div>
-      </section> -->
-    <!-- </div> -->
-
-    <!-- Acoustic CNC Panels -->
-    <div id="acoustic" class="container">
-      <!-- <h1>Wall Panels</h1> -->
-      <h1>Acoustic CNC Panels</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Acoustic CNC cut wall panels are precision-cut panels designed to improve sound absorption while adding
-            aesthetic appeal to interior spaces. Crafted from high-density materials like MDF, plywood, or fiber cement,
-            these panels use CNC cutting technology to create intricate patterns, perforations, or grooves that enhance
-            acoustic performance.
-          </p>
-        </section>
-        <div id="image-gallery">
-          <img src="images/Accoustic/CNC/1.jpg" alt="CNC Panel 1" />
-          <img src="images/Accoustic/CNC/2.jpg" alt="CNC Panel 2" />
-          <img src="images/Accoustic/CNC/3.jpg" alt="CNC Panel 3" />
-          <img src="images/Accoustic/CNC/4.jpg" alt="CNC Panel 4" />
-          <img src="images/Accoustic/CNC/5.jpg" alt="CNC Panel 5" />
-        </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>About <span>Ecovation</span></h2>
+        <p>Inspired by nature, driven by innovation</p>
+        <div class="separator"></div>
       </div>
-    </div>
-
-    <!-- Acoustic Screens -->
-    <div id="acsc" class="container">
-      <h1>Acoustic Screens</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Acoustic Screens are soundproof barriers or panels designed to absorb, block, or redirect sound to reduce noise
-            and enhance the acoustics of a space. They are ideal for offices, studios, and public areas.
-          </p>
-        </section>
-        <div id="image-gallery">
-          <img src="images/Accoustic/Screens/1.jpg" alt="Acoustic Screen" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Printed Acoustic Panels -->
-    <div id="pacp" class="container">
-      <h1>Printed Acoustic Panels</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Printed Acoustic Panels are a visually appealing solution that combine sound absorption with custom graphics,
-            making them perfect for spaces where both acoustics and aesthetics matter.
-          </p>
-        </section>
-        <div class="gallery-container">
-          <div id="image-gallery">
-            <img src="images/Accoustic/Printed/1.jpg" alt="Printed Panel 1" />
-            <img src="images/Accoustic/Printed/2.jpg" alt="Printed Panel 2" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hanging Clouds -->
-    <div id="hc" class="container">
-      <!-- <h1>Ceilings</h1> -->
-      <h1>Hanging Clouds</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Hanging clouds, or acoustic cloud panels, provide an innovative solution for controlling sound in large spaces
-            with high ceilings. They reduce noise, control reverberation, and enhance acoustics—ideal for concert halls,
-            offices, classrooms, and theaters.
-          </p>
-        </section>
-        <div id="image-gallery">
-          <img src="images/Accoustic/Clouds/1.jpg" alt="Hanging Cloud 1" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Acoustic Cell Ceilings -->
-    <div id="accc" class="container">
-      <h1>Acoustic Cell Ceilings</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Acoustic cell ceilings consist of individual panels arranged in a grid system engineered to absorb sound and reduce
-            reverberation. They are ideal for spaces where sound control is critical.
-          </p>
-        </section>
-        <div id="image-gallery">
-          <img src="images/Accoustic/CellCeiling/1.jpg" alt="Acoustic Cell Ceiling 1" />
-          <img src="images/Accoustic/CellCeiling/2.jpg" alt="Acoustic Cell Ceiling 2" />
-          <img src="images/Accoustic/CellCeiling/3.jpg" alt="Acoustic Cell Ceiling 3" />
-          <img src="images/Accoustic/CellCeiling/4.jpg" alt="Acoustic Cell Ceiling 4" />
-          <img src="images/Accoustic/CellCeiling/5.jpg" alt="Acoustic Cell Ceiling 4" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Acoustic Baffles -->
-    <div id="baf" class="container">
-      <h1>Acoustic Baffles</h1>
-      <div id="cont">
-        <section id="products">
-          <p>
-            Acoustic baffles are sound-absorbing or diffusing structures used to control sound in spaces like concert halls,
-            studios, and industrial areas. They reduce noise levels and control reverberation, creating a more controlled sound environment.
-          </p>
-        </section>
-        <div id="image-gallery">
-          <img src="images/Accoustic/Baffles/1.jpg" alt="Acoustic Baffle 1" />
-          <!-- <img src="images/Accoustic/Baffles/1.jpg" alt="Acoustic Baffle 2" /> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-
-    <!-- Careers Section -->
-    <div id="careers" class="container careers-section">
-        <h1>Careers</h1>
       
-        <section class="career-form-wrapper">
-          <form action="#" method="POST" class="career-form">
-            <input type="text" name="fullname" placeholder="Full Name" required />
-            <input type="email" name="gmail" placeholder="Email Address" required />
-            <input type="tel" name="pho_no" placeholder="Mobile Number" required />
-            <input type="text" name="address" placeholder="Address" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </section>
-    </div>
-      
-
-    <footer id="contact">
-      <div class="footer-container">
-        <h2>Contact Us</h2>
-        <div class="footer-content">
-            <div class="contact-card">
-                <img src="images/logos/whatsapp.png" alt="WhatsApp Icon" />
-                <h3>WhatsApp</h3>
-                <p>
-                    <a href="https://wa.me/919513877866?text=Hi%20Ecovation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank">
-                    +91 9513877866
-                    </a>
-                </p>
+      <div class="about-content">
+        <div class="about-image fade-in">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Interior Design Studio">
+        </div>
+        <div class="about-text fade-in">
+          <p>Ecovation is a boutique interior design firm specializing in creating harmonious spaces that blend aesthetics, functionality, and sustainability. Founded on the belief that good design should enhance both the environment and the human experience, we approach each project with a commitment to excellence and attention to detail.</p>
+          
+          <div class="mission-vision">
+            <div class="mission fade-in">
+              <h3>Our Mission</h3>
+              <p>To create innovative, sustainable interior spaces that enhance the quality of life for our clients while minimizing environmental impact. We strive to deliver exceptional design solutions that are both beautiful and functional.</p>
             </div>
-          <div class="contact-card">
-            <img src="images/logos/call.png" alt="Call Icon" />
-            <h3>Call</h3>
-            <p><a href="tel:+919513877866">+91 9513877866</a></p>
-          </div>
-          <div class="contact-card">
-            <img src="images/logos/email.png" alt="Email Icon" />
-            <h3>Email</h3>
-            <p><a href="mailto:info@ecovation.co.in">info@ecovation.co.in</a></p>
-          </div>
-          <div class="contact-card">
-            <img src="images/logos/website.png" alt="Website Icon" />
-            <h3>Website</h3>
-            <p><a href="https://www.ecovation.co.in">www.ecovation.co.in</a></p>
-          </div>
-          <div class="contact-card">
-            <img src="images/logos/location.png" alt="Address Icon" />
-            <h3>Address</h3>
-            <p>Arvind Oasis, Unit No, B/19/01 - Nagasandra Tumkur Road,</p>
-            <p>Bangalore, Karnataka - 560073</p>
+            <div class="vision fade-in">
+              <h3>Our Vision</h3>
+              <p>To be recognized as a leading interior design firm that sets new standards for eco-conscious, innovative design. We aim to inspire a shift towards more sustainable practices in the industry while never compromising on style or quality.</p>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="clients">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Our <span>Clients</span></h2>
+        <p>We've had the privilege of working with these amazing companies</p>
+        <div class="separator"></div>
+      </div>
+      
+      <div class="client-logos">
+        <div class="client-logo">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.WP7KdErw_cPtdfH7E-aIjwAAAA&pid=Api&P=0&h=180" alt="Redbrick Offices">
+        </div>
+        <div class="client-logo">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.reZfzYzV4VKZs0E_6JY-dwHaHa&pid=Api&P=0&h=180" alt="SonyLiv">
+        </div>
+        <div class="client-logo">
+          <img src="https://logos-world.net/wp-content/uploads/2020/11/Liebherr-Logo-Old.jpg" alt="Liebherr">
+        </div>
+        <div class="client-logo">
+          <img src="https://149448277.v2.pressablecdn.com/wp-content/uploads/2019/05/MARSH_horizontal_4c-1.jpg" alt="Marsh">
+        </div>
+        <div class="client-logo">
+          <img src="https://yt3.ggpht.com/a/AGF-l78-8XxaFSQzjduwEELVwvLzDysAwsLe1O6ciQ=s900-mo-c-c0xffffffff-rj-k-no" alt="Mercer">
+        </div>
+        <div class="client-logo">
+          <img src="https://download.logo.wine/logo/Ceva_(semiconductor_company)/Ceva_(semiconductor_company)-Logo.wine.png" alt="Ceva">
+        </div>
+        <div class="client-logo">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gen Digital">
+        </div>
+        <div class="client-logo">
+          <img src="images/logos/adt.png" alt="ADT">
+        </div>
+        <div class="client-logo">
+          <img src="images/logos/alphadyne.jpeg" alt="Alphadyne">
+        </div>
+        <div class="client-logo">
+          <img src="images/logos/enfinity.jpg" alt="Enfinity">
+        </div>
+        <div class="client-logo">
+          <img src="images/logos/sears.jpeg" alt="Sears">
+        </div>
+        <div class="client-logo">
+          <img src="images/logos/ukg.jpeg" alt="UKG">
+        </div>
+      </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Our <span>Services</span></h2>
+        <p>Tailored solutions for every space</p>
+        <div class="separator"></div>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Workplaces</h3>
+          <p>Creating productive and inspiring commercial spaces that reflect your brand identity and enhance employee wellbeing. Our workplace designs optimize functionality while creating environments that inspire creativity and collaboration.</p>
+        </div>
+        
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Residential</h3>
+          <p>Transforming houses into personalized homes that reflect your lifestyle and aesthetic preferences. We design comfortable, functional living spaces that harmonize with your daily routines and enhance your quality of life.</p>
+        </div>
+        
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-volume-up"></i>
+          </div>
+          <h3>Acoustic Panels</h3>
+          <p>Enhancing sound quality and reducing noise with custom acoustic solutions. Our acoustic panels combine functionality with aesthetic appeal, improving the auditory experience in any space while complementing your interior design.</p>
+        </div>
+        
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <h3>Space Planning</h3>
+          <p>Optimizing your space for maximum efficiency and flow. Our strategic space planning ensures every square foot serves a purpose, creating intuitive layouts that enhance functionality without sacrificing style.</p>
+        </div>
+        
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Sustainable Design</h3>
+          <p>Integrating eco-friendly materials and energy-efficient solutions. Our sustainable design approach reduces environmental impact while creating healthy, beautiful spaces that stand the test of time.</p>
+        </div>
+        
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Project Management</h3>
+          <p>Overseeing your project from concept to completion. Our comprehensive project management services ensure timely execution, quality control, and seamless coordination between all parties involved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Our <span>Portfolio</span></h2>
+        <p>Showcasing our finest work</p>
+        <div class="separator"></div>
+      </div>
+      
+      <div class="portfolio-filter fade-in">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="workplaces">Workplaces</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="acoustic">Acoustic</button>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Workplaces Projects -->
+        <div class="portfolio-item workplaces fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Modern Office Design">
+            <div class="portfolio-overlay">
+              <h3>Corporate Headquarters</h3>
+              <p>A dynamic workspace designed for collaboration and productivity</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item workplaces fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Creative Studio Space">
+            <div class="portfolio-overlay">
+              <h3>Creative Agency Studio</h3>
+              <p>Inspiring environment that fosters creativity and innovation</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Residential Projects -->
+        <div class="portfolio-item residential fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" alt="Luxury Apartment">
+            <div class="portfolio-overlay">
+              <h3>Urban Apartment</h3>
+              <p>Contemporary living space with minimalist aesthetics</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item residential fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Family Home">
+            <div class="portfolio-overlay">
+              <h3>Suburban Family Home</h3>
+              <p>Functional and cozy design for modern family living</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Acoustic Projects -->
+        <div class="portfolio-item acoustic fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Recording Studio">
+            <div class="portfolio-overlay">
+              <h3>Recording Studio</h3>
+              <p>Professionally designed acoustic treatment for optimal sound</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item acoustic fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1470075801209-17f9ec0cada6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Conference Room">
+            <div class="portfolio-overlay">
+              <h3>Corporate Conference Room</h3>
+              <p>Acoustic solutions for clear communication in meetings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Contact <span>Us</span></h2>
+        <p>Get in touch for your next project</p>
+        <div class="separator"></div>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Our Location</h3>
+              <p>Arvind Oasis, Unit No, B/19/01 - Nagasandra Tumkur Road,<br/>Bangalore, Karnataka - 560073</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+919513877866">+91 9513877866</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Address</h3>
+              <p><a href="mailto:info@ecovation.co.in">info@ecovation.co.in</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/919513877866?text=Hi%20Ecovation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank">+91 9513877866</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form fade-in">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Eco<span>vation</span></h3>
+          <p>Transforming spaces into extraordinary experiences with sustainable, innovative interior design solutions.</p>
+          <div class="social-links">
+            <a href="http://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Workplaces</a></li>
+            <li><a href="#services">Residential</a></li>
+            <li><a href="#services">Acoustic Panels</a></li>
+            <li><a href="#services">Space Planning</a></li>
+            <li><a href="#services">Sustainable Design</a></li>
+            <li><a href="#services">Project Management</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Arvind Oasis, Unit No, B/19/01 - Nagasandra Tumkur Road,<br/>Bangalore, Karnataka - 560073</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919513877866">+91 9513877866</a></span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:info@ecovation.co.in">info@ecovation.co.in</a></span>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp"></i>
+              <span>
+                <a href="https://wa.me/919513877866?text=Hi%20Ecovation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank">
+                  +91 9513877866
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Ecovation. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    // Wait for DOM to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Initialize all scroll reveal animations
+      initScrollReveal();
+      
+      // Navbar scroll behavior
+      initNavbarScroll();
+      
+      // Mobile menu toggle
+      initMobileMenu();
+      
+      // Back to top button
+      initBackToTop();
+      
+      // Portfolio filtering
+      initPortfolioFilter();
+      
+      // Form submission handler
+      initContactForm();
+      
+      // Add reveal classes to elements for mobile-friendly animations
+      addRevealClasses();
+    });
+    
+    // Initialize all scroll reveal animations
+    function initScrollReveal() {
+      // Get all elements with animation classes
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const revealElements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .reveal-down, .reveal-zoom');
+      
+      // Initial check
+      checkReveal(fadeElements);
+      checkReveal(revealElements);
+      
+      // Check on scroll (with throttling for better performance)
+      let scrollTimeout;
+      window.addEventListener('scroll', function() {
+        if (!scrollTimeout) {
+          scrollTimeout = setTimeout(function() {
+            checkReveal(fadeElements);
+            checkReveal(revealElements);
+            scrollTimeout = null;
+          }, 10);
+        }
+      });
+      
+      // Check on resize
+      window.addEventListener('resize', function() {
+        checkReveal(fadeElements);
+        checkReveal(revealElements);
+      });
+    }
+    
+    // Check if elements should be revealed - once active, they stay active
+    function checkReveal(elements) {
+      elements.forEach(element => {
+        // Skip client logos section to prevent any animation issues
+        if (element.closest('.client-logos') || element.classList.contains('client-logo')) {
+          return;
+        }
+        
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('active');
+        }
+      });
+    }
+    
+    // Add reveal classes to elements based on their position
+    function addRevealClasses() {
+      // Apply different reveal animations to various sections
+      
+      // About section elements
+      if(document.querySelector('.about-image')) {
+        document.querySelector('.about-image').classList.add('reveal-left');
+        document.querySelector('.about-text').classList.add('reveal-right');
+      }
+      
+      // Mission and Vision boxes
+      const missionVision = document.querySelectorAll('.mission, .vision');
+      missionVision.forEach((element, index) => {
+        if (index % 2 === 0) {
+          element.classList.add('reveal-left');
+        } else {
+          element.classList.add('reveal-right');
+        }
+      });
+      
+      // Services cards with alternating animations
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach((card, index) => {
+        if (index % 3 === 0) {
+          card.classList.add('reveal-left');
+        } else if (index % 3 === 1) {
+          card.classList.add('reveal-up');
+        } else {
+          card.classList.add('reveal-right');
+        }
+      });
+      
+      // Portfolio items with zoom effect
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      portfolioItems.forEach(item => {
+        item.classList.add('reveal-zoom');
+      });
+      
+      // Contact form and info
+      if(document.querySelector('.contact-info')) {
+        document.querySelector('.contact-info').classList.add('reveal-left');
+        document.querySelector('.contact-form').classList.add('reveal-right');
+      }
+      
+      // Stats with sequential reveal
+      const stats = document.querySelectorAll('.stat');
+      stats.forEach((stat, index) => {
+        stat.classList.add('reveal-up');
+        // Add delay for sequential animation
+        stat.style.transitionDelay = `${index * 0.1}s`;
+      });
+      
+      // Skip animations for client logos to prevent fade out issues
+      // Keep clients section always visible
+    }
+    
+    // Navbar scroll behavior
+    function initNavbarScroll() {
+      const navbar = document.querySelector('.navbar');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        // Highlight current section in navbar
+        let currentSection = '';
+        
+        document.querySelectorAll('section').forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    }
+    
+    // Mobile menu toggle
+    function initMobileMenu() {
+      const menuToggle = document.getElementById('mobile-menu');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Toggle hamburger animation
+        const bars = menuToggle.querySelectorAll('.bar');
+        if (menuToggle.classList.contains('active')) {
+          bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+          bars[1].style.opacity = '0';
+          bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        } else {
+          bars[0].style.transform = 'none';
+          bars[1].style.opacity = '1';
+          bars[2].style.transform = 'none';
+        }
+      });
+      
+      // Close mobile menu when clicking a nav link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+          
+          // Reset hamburger icon
+          const bars = menuToggle.querySelectorAll('.bar');
+          bars[0].style.transform = 'none';
+          bars[1].style.opacity = '1';
+          bars[2].style.transform = 'none';
+        });
+      });
+    }
+    
+    // Back to top button
+    function initBackToTop() {
+      const backToTopBtn = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('active');
+        } else {
+          backToTopBtn.classList.remove('active');
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+    
+    // Portfolio filtering
+    function initPortfolioFilter() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterBtns.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Get filter value
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Filter portfolio items
+          portfolioItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    
+    // Contact form submission
+    function initContactForm() {
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+          
+          // Basic form validation
+          if (!name || !email || !phone || !subject || !message) {
+            alert('Please fill in all fields');
+            return;
+          }
+          
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+          }
+          
+          // Phone validation
+          const phoneRegex = /^\d{10,15}$/;
+          if (!phoneRegex.test(phone.replace(/[^0-9]/g, ''))) {
+            alert('Please enter a valid phone number');
+            return;
+          }
+          
+          // In a real-world scenario, you would send this data to a server
+          // For now, we'll just show a success message
+          alert('Thank you for your message! We will get back to you soon.');
+          contactForm.reset();
+        });
+      }
+    }
+  </script>
+</body>
 </html>
